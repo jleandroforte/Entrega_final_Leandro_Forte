@@ -1,0 +1,64 @@
+
+{% extends "AppBlog/base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<section>
+  <div>
+    <h1>Lista de articulos</h1>
+
+<a href="{% url 'Articulos'  %}"></a>
+
+<table class="table table-bordered table-hover" > 
+<thead class="table-primary"> 
+<tr>
+
+  <th>Titulo</th>
+  <th>Subtítulo</th>
+  <th>Ver más</th>
+  <th>Opciones</th>
+
+</tr>
+</thead>
+
+<tbody> 
+
+{% for articulo in object_list %} 
+
+<tr>
+  
+  <td><font color="white">{{articulo.titulo}}</td>
+  <td> <font color="white"> {{articulo.subtitulo}}</td>
+  <td> <font color="white"> <a href="{% url 'detalle_articulo' articulo.id %}">{{ articulo.id}} </a></td>
+  {% if articulo.owner == user%}
+  <td> 
+    <font color="white"> <a href="{% url 'editar_articulo' articulo.id %}"><button class="btn btn"> Editar artículo </button></a> 
+    <font color="white"> <a href="{% url 'borrar_articulo' articulo.id %}"><button class="btn btn-danger"> Eliminar artículo<i class="bi bi-trash"></i></button> 
+  </td>
+    {% else %}
+      <td>Sin Acciones</td>
+    {% endif%}
+
+</tr>
+
+{% comment %} <a href="{% url 'editar_articulo' articulo.id %}">Editar artículo</a>
+</td>
+<td>
+<a href="{% url 'borrar_articulo' articulo.id %}"> "Eliminar articulo"
+    <i class="bi bi-trash"></i> {% endcomment %}
+
+    <tbody> 
+
+{% empty %}
+<p>No hay entradas aún.</p>
+
+{% endfor %}
+
+</table>
+    
+  </div>
+</section>
+
+{% endblock %}

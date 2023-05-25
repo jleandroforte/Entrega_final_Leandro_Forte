@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+
+
+{% extends 'AppBlog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<body> 
+
+
+<h5 style="text-align:left;">{{articulos.titulo}} </h5><br> 
+<h5 style="text-align:left;">{{articulos.subtitulo}} </h5><br> 
+<p style="text-align:left;">{{articulos.cuerpo}} </h5></p><br>
+<h5 style="text-align:left;">{{articulos.autor}} </h5><br> 
+<h5 style="text-align:left;">{{articulos.fecha}} </h5> 
+ 
+<body> 
+
+{%endblock%}
