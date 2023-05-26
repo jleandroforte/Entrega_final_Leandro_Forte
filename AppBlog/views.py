@@ -120,6 +120,7 @@ class ArticuloDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'AppBlog/borrar_articulo.html'
     context_object_name='articulo'
     success_url = reverse_lazy('Articulos')
+    
     # def get(self, request, pk):
     #     art = get_object_or_404(Articulo, id=pk)
     #     form = Formulario_Articulo(instance=art)
@@ -136,4 +137,3 @@ class ArticuloDeleteView(LoginRequiredMixin, DeleteView):
 
     #     form.save()
     #     return redirect(self.success_url)
-    
