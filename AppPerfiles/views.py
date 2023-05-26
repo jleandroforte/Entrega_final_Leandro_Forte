@@ -3,9 +3,11 @@ from django.urls import reverse, reverse_lazy
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import LogoutView
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate 
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import UpdateView
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -89,3 +91,10 @@ def agregar_avatar(request):
         context={'form': formulario},
     )
 
+@login_required
+def ir_al_admin(request):
+    if request.user.is_staff:
+        return redirect('admin:index')
+    else:
+       
+        return HttpResponse("Debe ser administrador para acceder a esta opcion")

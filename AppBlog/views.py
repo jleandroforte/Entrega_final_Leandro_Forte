@@ -117,5 +117,5 @@ class ArticuloUpdateView(LoginRequiredMixin, View):
 class ArticuloDeleteView(LoginRequiredMixin, DeleteView):
     model = Articulo
     template_name = 'AppBlog/borrar_articulo.html'
-    success_url = reverse_lazy('borrar_articulo')
+    success_url = reverse_lazy('Articulos')
     

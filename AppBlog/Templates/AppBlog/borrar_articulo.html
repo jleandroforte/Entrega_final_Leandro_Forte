@@ -6,11 +6,12 @@
 <form method="post">
   {% csrf_token %}
   {{ form.as_p }}
-  <p>Confirmar eliminación de artículo {{articulo}}?</p>
+  <p>Confirmar eliminación de artículo {{object}}?</p>
+
   <input type="submit" value="Eliminar" />
 </form>
 
 <br>
-<a href="{% url 'detalle_articulo' %}">Volver a la lista de artículos</a>
+<a href="{% url 'Articulos' %}">Volver a la lista de artículos</a>
 
 {% endblock contenido %}

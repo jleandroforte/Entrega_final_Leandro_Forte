@@ -57,6 +57,12 @@
                         </li>
                         <li>
                             <a class="dropdown-item" href="{% url 'logout' %}"><strong>Cerrar Sesión</strong></a>
+                    {% comment %} 
+                    {%if user.is_staff %}: 
+                        <li><a class="dropdown-item" href="{% url 'admin/' %}"><strong>Ir al panel de administración</strong></a><li>
+                        {% endif %}:  {% endcomment %}
+
+
                         </li>
                     </ul>
                 {% endif %}
