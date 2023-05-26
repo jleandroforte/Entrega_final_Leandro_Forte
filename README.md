@@ -7,3 +7,8 @@ Desde allí podemos navegar para registrarnos en el sitio, iniciar sesión, ver 
 El códido está estructurado en 2 Apps, AppBlog para el manejo general y de los artículos y AppPerfiles para la administración y registro de usuarios. 
 
 En AppBlog/tests.py se puede encontrar la prueba unitaria de creación de artículo que no incluí en el video demostrativo.  
+
+Para acceder a la vista administración en /admin se puede usar el usuario Admin y la contrasenia: Contrasenia01. 
+
+Incluyo link a video demostrativo de las funcionalidades del sitio. 
+
