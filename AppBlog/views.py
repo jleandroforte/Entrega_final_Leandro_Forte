@@ -11,8 +11,9 @@ from AppBlog.forms import *
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-
 from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView, View
+
+
 
 # Create your views here.
 
@@ -117,5 +118,22 @@ class ArticuloUpdateView(LoginRequiredMixin, View):
 class ArticuloDeleteView(LoginRequiredMixin, DeleteView):
     model = Articulo
     template_name = 'AppBlog/borrar_articulo.html'
+    context_object_name='articulo'
     success_url = reverse_lazy('Articulos')
+    # def get(self, request, pk):
+    #     art = get_object_or_404(Articulo, id=pk)
+    #     form = Formulario_Articulo(instance=art)
+    #     ctx = {'formulario': form,'articulo':art}
+    #     return render(request, 'AppBlog/borrar_articulo.html', ctx)
+    
+    # def post(self, request, pk=None):
+    #     art = get_object_or_404(Articulo, id=pk)
+    #     form = Formulario_Articulo(request.POST, instance=art)
+
+    #     if not form.is_valid():
+    #         ctx = {'formulario': form}
+    #         return render(request, self.template_name, ctx)
+
+    #     form.save()
+    #     return redirect(self.success_url)
     

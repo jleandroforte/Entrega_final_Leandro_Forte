@@ -1,12 +1,14 @@
 
 {% extends "AppBlog/base.html" %}
 
-{% block contenido %}
+{% load static %}
+
+{% block content %}
 
 <form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <p>Confirmar eliminación de artículo {{object}}?</p>
+  {% csrf_token %} 
+ {{ form }} 
+  <p>Confirmar eliminación de artículo {{articulo.titulo}}?</p>
 
   <input type="submit" value="Eliminar" />
 </form>
@@ -14,4 +16,4 @@
 <br>
 <a href="{% url 'Articulos' %}">Volver a la lista de artículos</a>
 
-{% endblock contenido %}
+{% endblock %}
