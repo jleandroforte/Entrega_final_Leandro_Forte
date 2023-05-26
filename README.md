@@ -10,5 +10,9 @@ En AppBlog/tests.py se puede encontrar la prueba unitaria de creación de artíc
 
 Para acceder a la vista administración en /admin se puede usar el usuario Admin y la contrasenia: Contrasenia01. 
 
-Incluyo link a video demostrativo de las funcionalidades del sitio. 
+Incluyo link a video demostrativo de las funcionalidades del sitio: 
+
+https://www.loom.com/share/a0f34d41e9434a3e8ba4c3b343ed5bd8
+
+
 
