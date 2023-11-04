@@ -14,5 +14,15 @@ Incluyo link a video demostrativo de las funcionalidades del sitio:
 
 https://www.loom.com/share/a0f34d41e9434a3e8ba4c3b343ed5bd8
 
+--------English Version--------
 
+This is the final project for Coderhouse's Python Course. It is a blog-style website created through Djando that allows users for a full CRUD. 
+
+By running the server and providing we have the packages indicated in requirements.txt, we'll be directed to the start ("Inicio") page. From there we can sign up, log in and out, check the articles and create an adrticle once we sign in. 
+
+The code is structure in 2 Django Apps, AppBlog for for management adn AppPerfiles for user's management. 
+
+The following video link provides a brief explanation of the project's functionalities (in Spanish): 
+
+https://www.loom.com/share/a0f34d41e9434a3e8ba4c3b343ed5bd8
 
